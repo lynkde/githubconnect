@@ -16,7 +16,7 @@ sentinel_log_type =  'githubscanaudit'
 logging.info("Sentinel Logtype:{}".format(sentinel_log_type))
 logAnalyticsUri = os.environ.get('LogAnaltyicsUri')
 
-if ((logAnalyticsUri in (None, '') or str(logAnalyticsUri).isspace())):    
+if ((logAnalyticsUri in (None, '') or logAnalyticsUri.isspace())):    
  logAnalyticsUri = 'https://' + sentinel_customer_id + '.ods.opinsights.azure.com'
 
 logging.info(logAnalyticsUri)
